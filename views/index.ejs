@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">​
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">﻿​
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <link rel="stylesheet" href="/stylesheets/style.css"/>
+  <link rel="stylesheet" href="/stylesheets/volume.css"/>
+</head>
+<body>
+<header>
+  <div id="tip">建议使用PC端Chrome或FireFox浏览器<br />如播放异常则浏览器不支持</div>
+  <div id="menu-btn">歌曲列表</div>
+  <h1><%= title %></h1>
+  <ul id="type">
+    <li data-type="dot" class="types type-selected">点状</li>
+    <li data-type="column" class="types">柱状</li>
+  </ul>
+  <p>
+    <span>音量</span><input type="range" id="volume" min="0" max="100" value="60">
+  </p>
+</header>
+<div id="music-list">
+  <ul>
+    <li id="togMusic" class="m-stop"></li>
+    <% music.forEach(function(name) { %>
+      <li class="m-items" title="<%= name %>"><%= name.split('.')[0] %></li>
+    <% }) %>
+  </ul>
+</div>
+<div id="view-content"></div>
+<div id="mask"></div>
+<footer><p><a href="https://github.com/DarylsJoy/visual-music" target="_blank">GitHub</a></p></footer>
+<script src="/javascripts/MusicVisualizer.js" type="text/javascript"></script>
+<script src="/javascripts/main.js" type="text/javascript"></script>
+</body>
+</html>

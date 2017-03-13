@@ -1,0 +1,72 @@
+#volume {
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  width: 300px;
+  border-radius: 10px; /*这个属性设置使填充进度条时的图形为圆角*/
+}
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+#volume::-webkit-slider-runnable-track {
+  background: #4e4e4e;
+  height: 15px;
+  border-radius: 10px; /*将轨道设为圆角的*/
+  box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+  background: linear-gradient(90deg, rgb(255, 255, 255), rgb(204, 204, 204));
+  border-radius: 50%; /*外观设置为圆形*/
+  border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+  box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+#volume::-moz-range-track {
+  height: 15px;
+  border-radius: 10px; /*将轨道设为圆角的*/
+  box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; /*轨道内置阴影效果*/
+}
+#volume::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  margin-top: -5px; /*使滑块超出轨道部分的偏移量相等*/
+  background: linear-gradient(90deg, rgb(255, 255, 255), rgb(204, 204, 204));
+  border-radius: 50%; /*外观设置为圆形*/
+  border: solid 0.125em rgba(205, 224, 230, 0.5); /*设置边框*/
+  box-shadow: 0 .125em .125em #3b4547; /*添加底部阴影*/
+}
+#volume::-moz-range-progress {
+  background: #ffffff;
+  height: 13px;
+  border-radius: 10px;
+}
+#volume::-ms-track {
+  height: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112;
+  border-color: transparent; /*去除原有边框*/
+  color: transparent; /*去除轨道内的竖线*/
+}
+
+#volume::-ms-thumb {
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgb(255, 255, 255), rgb(204, 204, 204));
+  margin-top: -2px;
+}
+#volume::-ms-fill-lower {
+  /*进度条已填充的部分*/
+  height: 10px;
+  border-radius: 10px;
+  background: #ffffff;
+}
